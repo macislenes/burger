@@ -25,25 +25,33 @@ Eat da Burger uses the following node packages as dependencies:
 ## Unpacking the app:
 The application is divided into six main parts
 
-* config: 
+* config: holds two Javascript files   
+    * connection.js - sets up the mysql connection
+    * orm.js - what our models will use to communicate to the database
 
-* controllers: 
+* controllers: responsible for defining routes that the server can listen to
+    * get '/index'- using the model to display the burgers currently in the database
+    * post '/burger'- using the model we are inserting a new burger into the mysql database 
+    * put '/burger/id- using the model we will update a burger from un-devoured to devoured
 
-* db:
+* db: our mysql files
+    * schema.sql - creates our database
+    * seeds.sql - feeds the database data
 
-* models:
+* models: representation of the data we plan on sending to the database. Connects the orm which communicates with the database 
 
-* public: 
+* public: contains the assets we will use on the client side such as CSS and Javascript
 
-* views: 
+* views: contains the main.handlebars page we will use as a layout and the index.handlebars to render the burgers to the html dynamically
 
  
 ## Start to Finish:
-Here's how you can use FriendFinder!
+Here's how you can use Eat da Burger!
 
-1. Enter your name followed by a photo URL in after the survey page opens
-2. Give your answers on a scale of 1 - 5 based on how much you agree or disagree with a statement
-3. Submit the survey and your match will generate on the screen for you
+1. Enter the name of a burger you like to enjoy 
+2. Press the 'Add a Burger' button
+3. When you want to eat the burger push the 'Devour' button
+4. The burger will move from the left to the right of the page
 
 
 Designed and developed by: Maci Slenes
